@@ -1,0 +1,454 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie6 oldie"><![endif]-->
+<!--[if IE 7]><html class="no-js ie7 oldie"><![endif]-->
+<!--[if IE 8]><html class="no-js ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<style>
+
+	</style>
+	<link rel="stylesheet" href="css/css.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+	<!-- html5.js -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script src="js/comm.js"></script>
+	<script src="js/audio.min.js"></script>
+	<!-- Chang URLs to wherever Video.js files will be hosted -->
+  	<link href="css/video-js.css" rel="stylesheet" type="text/css">
+  	<!-- video.js must be in the <head> for older IEs to work. -->
+  	<script src="js/video.js"></script>
+  	<script>
+    videojs.options.flash.swf = "images/video-js.swf";
+  	</script>
+	<script>
+	var a = audiojs;
+      a.events.ready(function() {
+        var a1 = a.createAll();
+        var audio = a1[0];
+		$("#metro-music").click(function(){
+			audio.playPause();
+			played();
+		});
+      });
+	</script>
+</head>
+<body>
+<div class="section fix1" id="section1">
+	<header>
+		<div class="logo"><h1></h1><span></span><em>inspired theme</em></div>
+		<div class="share">
+			<a href="javascript:;" class="tw" title="twitter"></a>
+			<a href="javascript:;" class="fb" title="facebook" date-scroll="#section2"></a>
+			<a href="javascript:;" class="em" title="email"></a>
+		</div>
+	</header>
+	<nav class="cf">
+		<ul class="nav" id="nav">
+			<li data-menuanchor="page1" class="active"><div><a href="javascript:;">首页</a></div><span><a href="javascript:;">首页</a></span></li>
+			<li><div><a href="javascript:;">Tiles</a></div><span><a href="javascript:;">Tiles</a></span></li>
+			<li><div><a href="javascript:;">Builder Demos</a></div><span><a href="javascript:;">Builder Demos</a></span></li>
+			<li><div><a href="#page3">Resume</a></div><span><a href="#page3">Resume</a></span></li>
+			<li><div><a href="#page4">Work</a></div><span><a href="#page4">Work</a></span></li>
+			<li><div><a href="javascript:;">Contact</a></div><span><a href="javascript:;">Contact</a></span></li>
+			<li><div><a href="javascript:;">Shortcodes</a></div><span><a href="javascript:;">Shortcodes</a></span></li>
+		</ul>
+		<div class="search">
+			<input type="text" name="key" id="sea" placeholder="Search">
+		</div>
+	</nav>
+	<section class="cf">
+		<div class="metro-con cf">
+			<div class="metro-nav nav-color-blue nav-length-middle">
+				<a href="javascript:;">
+					<i class="metro-ico ico-message">&#66;</i>
+					<div class="metro-nav-info" id="in-num">350</div>
+					<div class="metro-nav-tit">最新消息</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-red nav-length-small">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-shutdown">&#71;</i>
+					<div class="metro-nav-info">7</div>
+					<div class="metro-nav-tit">设置提醒</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-green nav-length-small">
+				<a href="javascript:;" id="setting-show">
+					<i class="metro-ico ico-setting"></i>
+					<div class="metro-nav-info"></div>
+					<div class="metro-nav-tit">设置</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-juhuang nav-length-middle" style="">
+				<a href="javascript:;" id="metro-resume" date-scroll="#resume">
+					<i class="metro-ico ico-user">&#67;</i>
+					<div class="metro-nav-infos">
+						<h3>Mazerain</h3>
+						<p>This is test page!</p>
+					</div>
+					<div class="metro-nav-tit">个人介绍</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-shenglan nav-length-middle">
+				<a href="javascript:;" id="metro-music">
+					<audio src="images/陌生人.mp3" preload="auto"  id="audio"></audio><!--autoplay-->
+					<i class="metro-ico ico-music">&#68;</i>
+					<div class="metro-nav-info">13 Song</div>
+					<div class="metro-nav-tit">音乐<em class="playtime">00:00</em></div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-chaolv nav-length-cen">
+				<a href="javascript:;" id="metro-video">
+					<i class="metro-ico ico-video">&#69;</i>
+					<div class="metro-nav-info">26</div>
+					<div class="metro-nav-tit">视频</div>
+				</a>
+				<video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="242" height="158" poster="images/oceans-clip.png" data-setup="{}">
+    				<source src="images/equence.ogg" type='video/ogg; codecs="theora, vorbis"'/>
+					<source src="images/equence.webm" type='video/webm' >
+					<source src="images/equence.mp4" type='video/mp4'>
+  				</video>
+			</div>
+			<div class="metro-nav nav-color-zise nav-length-small">
+				<a href="javascript:;" id="metro-pic">
+					<i class="metro-ico ico-pic">&#70;</i>
+					<div class="metro-nav-info">135</div>
+					<div class="metro-nav-tit">图片</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-zhongse nav-length-cen" style="">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-cart">&#76;</i>
+					<div class="metro-nav-info">15</div>
+					<div class="metro-nav-tit">应用软件</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-tw nav-length-small">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-twitter">&#72;</i>
+					<div class="metro-nav-info">29</div>
+					<div class="metro-nav-tit">Twitter</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-orange nav-length-small">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-qzone">&#73;</i>
+					<div class="metro-nav-info">26</div>
+					<div class="metro-nav-tit">QQ空间</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-fengse nav-length-small">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-wb">&#74;</i>
+					<div class="metro-nav-info">135</div>
+					<div class="metro-nav-tit">新浪微博</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-db nav-length-small">
+				<a href="javascript:;" id="">
+					<i class="metro-ico ico-douban">&#75;</i>
+					<div class="metro-nav-info">11</div>
+					<div class="metro-nav-tit">豆瓣</div>
+				</a>
+			</div>
+			<div class="metro-nav nav-color-huise nav-length-middle">
+			<img style="width:326px;height:158px;border:#ccc solid 1px;" src="images/map.jpg" alt="百度地图">
+			</div>
+		</div>
+	</section>
+</div>
+<div class="section fix2" id="section2">
+	<div class="fixedbg">
+  <h2 class="fix2-tit">这是这个速度的时代！</h2>
+	<h2 class="fix2-tit">这是这个速度的时代！</h2>
+	<p class="fix2-con">我们都在努力奔跑，如果我跟不上，那么就只有残酷的被淘汰...</p>
+	<div class="fix2-img"><div id="snow1"><img src="images/snow.png" alt="snow" width="49" height="54"/></div><img src="http://www.0356sh.com/blog/images/blog_console.png" alt="Console"/></div>
+	<p class="fix2-img-con">这个妹子是谁呢？请登陆<a href="javascript:;">http://www.xxx.com</a>进行查看，有惊喜哦</p>
+	</div>
+</div>
+<!--resume-->
+<div class="section fix3" id="section3">
+	<div class="warp cf">
+		<div class="content fl">
+			<div class="introduce cf">
+				<div class="resume-pic i-pic">
+					<img src="images/resume-i-pic.png" alt="Jone Zhang">
+					<p>Jone Zhang</p>
+					<div class="resume-mask"><i class="change">修改</i><i class="del">删除</i></div>
+				</div>
+				<div class="i-info">
+					<h3>Jone Zhang</h3>
+					<p>This is a much longer one that will go on for a few lines.It has multiple paragraphs and is fullof waffle to pad out the comment. </p>
+					<p>Born just days apart and rivals since they were juniors figure skaters Mao Asada of Japan andSouth Korea's Kim Yu-Na vie for <a href="javascript:;" class="more"><img src="images/transparent.gif"/></a></p>
+				</div>
+			</div>
+			<div class="post cf">
+				<div class="resume-pic p-pic"><p>Past Experience</p></div>
+				<div class="p-list">
+					<p><span class="time">2012-2013：</span>Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus</p>
+					<p><span class="time">2012-2013：</span>Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus.Nam sed arcu non tellus fringilla fringilla ut vel ipsum. <a href="javascript:;" class="fix3-more"><img src="images/transparent.gif"/></a></p>
+				</div>
+			</div>
+			<div class="content cf">
+				<div class="resume-pic c-pic"><p>Contact Me</p></div>
+				<div class="c-grid">
+					<div class="grid-l fl">
+						<h3>Location</h3>
+						<p>Jone Zhang<br>
+							House 31, Road 12, Sector 4<br>
+							Dream Town, Dreamland 1230<br>
+							Phone: +966 1 000000</p>
+					</div>
+					<div class="grid-r fl">
+						<h3>Online</h3>
+						<p>Email : info@vectorlab.com <br>
+							Support : support@vectorlab.com<br>
+							Live Chat : live@vectorlab.com<br>
+							Skype : skype@vectorlab.com
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="sidebar fr">
+			<h2>Project Progress</h2>
+			<dl>
+				<dt>Web Desige</dt>
+				<dd class="progress"><span class="progress-bar bar-blue" title="80%"></span></dd>
+				<dt>Html/CSS</dt>
+				<dd class="progress"><span class="progress-bar bar-green" title="90%"></span></dd>
+				<dt>jQuery</dt>
+				<dd class="progress"><span class="progress-bar bar-red" title="50%"></span></dd>
+				<dt>PHP/Mysql</dt>
+				<dd class="progress"><span class="progress-bar bar-yellow" title="20%"></span></dd>
+				<dt>Photoshop</dt>
+				<dd class="progress"><span class="progress-bar bar-green" title="60%"></span></dd>
+				<dt>Seo/Sem</dt>
+				<dd class="progress"><span class="progress-bar bar-red" title="70%"></span></dd>
+			</dl>
+		</div>
+	</div>
+	<div class="fix3-mask"></div>
+	<div class="fix3-more-con">
+		<span class="time">2012-2013：</span>Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus. Nam sed arcu non tellus fringilla fringilla ut vel ipsum. Aliquam ac magna metus.Nam sed arcu non tellus fringilla fringilla ut vel ipsum.
+	</div>
+</div>
+<div class="section fix4" id="section4">
+	<h1>My Work</h1>
+	<h2>Latest cool projects we've been working on</h2>
+	<ul class="work-list">
+		<li><a href="javascript:;" class="filterbtn current" data-filter="work-con">全部</a></li>
+		<li><a href="javascript:;" class="filterbtn" data-filter="flat">平面</a></li>
+		<li><a href="javascript:;" class="filterbtn" data-filter="web">网页</a></li>
+		<li><a href="javascript:;" class="filterbtn" data-filter="ad">广告</a></li>
+	</ul>
+	<section>
+		<div class="work-cons cf">
+    		<div class="work-con cf flat">
+    			<div class="work-con-img">
+    				<img src="images/work1.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="work.html" data-mode="ajax">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    			</div>
+    		</div>
+    		<div class="work-con web">
+    			<div class="work-con-img">
+    				<img src="images/work2.jpg" alt="Jelsli">
+    				<div class="work-con-mask">
+    					<div class="work-con-mask"><i class="open-url" data-url="http://www.baidu.com" data-mode="iframe">修改</i><i class="del">删除</i></div>
+    				</div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+    		<div class="work-con flat">
+    			<div class="work-con-img">
+    				<img src="images/work1.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="http://www.0356sh.com" data-mode="iframe">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+    		<div class="work-con ad flat">
+    			<div class="work-con-img">
+    				<img src="images/work2.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="eee.html" data-mode="ajax">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+    		<div class="work-con cf flat">
+    			<div class="work-con-img">
+    				<img src="images/work1.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="work.html" data-mode="ajax">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    			</div>
+    		</div>
+    		<div class="work-con web">
+    			<div class="work-con-img">
+    				<img src="images/work2.jpg" alt="Jelsli">
+    				<div class="work-con-mask">
+    					<div class="work-con-mask"><i class="open-url" data-url="http://www.baidu.com" data-mode="iframe">修改</i><i class="del">删除</i></div>
+    				</div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+    		<div class="work-con web">
+    			<div class="work-con-img">
+    				<img src="images/work1.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="http://www.0356sh.com" data-mode="iframe">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+    		<div class="work-con ad ad">
+    			<div class="work-con-img">
+    				<img src="images/work2.jpg" alt="Jelsli">
+    				<div class="work-con-mask"><i class="open-url" data-url="eee.html" data-mode="ajax">修改</i><i class="del">删除</i></div>
+    			</div>
+    			<div class="work-con-p">
+    				<h3>Full width image</h3>
+    				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
+    			</div>
+    		</div>
+		</div>
+	</section>
+	<!--work-cons e-->
+</div>
+<!--fix4 end-->
+<div id="work-open">
+	<div class="close-work-open"><span>!</span></div>
+	<div id="work-frame"></div>
+</div>
+
+<div class="page_left">
+	<div class="close-page-left"></div>
+	<div id="snow"><img src="images/snow.png" alt="snow" width="49" height="54" id="snowimg"/></div>
+	<div class="userpic"><img src="images/userpic.png" alt="mazerain" width="150" height="150"></div>
+	<h2 class="username">夏目理绪</h2>
+	<p class="userinfo">日本偶像明星。夏目理绪自出道以来在影视、写真界做出了很好的成绩，还为《ggirl》、《朝日艺能》等很多杂志做过平面模特，另外还做过《Q大人》和《Pooh！》等综艺节目。</p>
+	<br/><br/>
+	<div class="usermenu">
+		<ul>
+			<li><a href="javascript:;">主页</a></li>
+			<li><a href="javascript:;">博客</a></li>
+			<li><a href="javascript:;">工具</a></li>
+			<li><a href="javascript:;">微博</a></li>
+			<li><a href="javascript:;">作品</a></li>
+		</ul>
+	</div>
+</div>
+
+
+<div class="page-right">
+	<div class="close-page-right"></div>
+	<div class="pic-con">
+		<div class="close-img"></div>
+		<ul>
+			<li><a href="javascript:;"><img src="images/pic/pic_01.jpg" alt="pic1"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_02.png" alt="pic2"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_03.jpg" alt="pic3"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_04.jpg" alt="pic4"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_05.jpg" alt="pic5"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_06.jpg" alt="pic6"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_07.jpg" alt="pic7"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_08.png" alt="pic8"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_09.png" alt="pic9"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_10.jpg" alt="pic10"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_11.jpg" alt="pic11"></a></li>
+			<li><a href="javascript:;"><img src="images/pic/pic_12.png" alt="pic12"></a></li>
+		</ul>
+	</div>
+</div>
+<div id="openbtn">
+	<a href="javascript:;" class="open-o" title="打开">&#33;</a>
+	<div class="opendiv">
+	<a href="http://www.baidu.com" target="_blank" class="open-m" title="会员中心">&#34;</a>
+	<a href="javascript:played1();" class="open-h" title="我的收藏">&#35;</a>
+	<a href="#page3" class="open-s" title="我要分享">&#36;</a>
+	<a href="#page1" class="open-t" title="返回顶部">&#37;</a>
+	</div>
+</div>
+<div id="swttc" style="background:url(swttc.gif) no-repeat;width:211px;height:129px;position:fixed;left:50%;top:50%;margin:-105px 0 0 -65px;z-index:100000;display:block;">
+	<div id="closeswt" style="cursor:pointer;width:25px;height:25px;float:right;"></div>
+	<a id="openswt" style="width:209px;height:92px;display:block;margin-top:25px;" href="http://webservice.zoosnet.net/LR/Chatpre.aspx?id=LZA25602193" target="_blank"></a>
+</div>
+<div id="qqalert" style="background:url(http://www.jcfkyy.com/templets/default/images/qq_alert.jpg) no-repeat; width:214px; height:124px;bottom:0; right:2px;position:fixed!important;position:absolute;_top:expression(documentElement.scrollTop+(documentElement.clientHeight-this.clientHeight)); z-index:999;">
+	<a href="javascript:cqa();" style=" display:block; float:right; margin:100px 20px 0 15px; color:#1670EB; font-size:12px;">拒绝</a>
+	<a href="http://www.jcfkyy.com/swt/" target="_blank" style=" display:block; float:right; margin:100px 0 0 10px; color:#1670EB; font-size:12px;">接受</a>
+</div>
+</body>
+<script>
+var swttc=document.getElementById('swttc');
+swttc.style.display="none";
+var closeswt=document.getElementById('closeswt');
+var openswt=document.getElementById('openswt');
+closeswt.onclick=function(){
+	swttc.style.display="none";
+}
+openswt.onclick=function(){
+	swttc.style.display="none";
+}
+function swttcr(){
+	var swtdisplay=swttc.style.display;
+	//alert(swtdisplay);
+	if(swtdisplay="none"){
+		swttc.style.display="block";
+	}
+}
+setInterval("swttcr()",50000000);
+
+document.getElementById('qqalert').style.display="none";
+setInterval("cqa()",1200000000);
+setInterval("sqa()",40000000000);
+function cqa(){
+	$("#qqalert").fadeOut("slow");
+}
+function sqa(){
+	if($("#qqalert").css("display")!="block"){
+		$("#qqalert").fadeIn("slow");
+	}
+	speed=20;
+	for(i=0;i<3;i++){
+		$("#qqalert").animate({"right":"0"},speed).animate({"bottom":"4px"},speed).animate({"right":"4px"},speed).animate({"bottom":"0"},speed);
+	}
+}
+/*$(document).ready(function() {
+	$(".closeswt").on('click',function(e) {
+		$("#swttc").hide();
+	});
+	$(".openswt").on('click',function(e) {
+		$("#swttc").hide();
+	});
+	function swttc(){
+		var swtdisplay=$("#swttc").css("display");
+		if(swtdisplay="none"){
+			$("#swttc").show();
+		}
+	}
+	setInterval(swttc,15000);
+});*/
+</script>
+</html>
