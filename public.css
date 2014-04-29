@@ -1,0 +1,23 @@
+/* $hack :ie 6 _  \ ie7 *+ \  ie6,ie7 *  \  ie7,firefox !important */
+html,body{height:100%;}
+body, dl, dd, h1, h2, h3, h4, h5, h6, p, form{margin:0;}
+*{margin:0;padding:0}
+body{font:14px/1.5 "\5FAE\8F6F\96C5\9ED1","\5B8B\4F53", sans-serif, Arial, System;background-color:#FFF;}/*\9ED1\4F53*/
+li{list-style:none;}
+img{border-width:0;}
+h2{font-size:14px;}
+h3{font-size:14px;}
+input,select,label{vertical-align:middle}
+a:link,a:visited{text-decoration:none;color:#000;}
+a:hover{color:#1465a6;}
+.hover a{color:#1465a6;font-weight:700;}
+.cf:before,.cf:after{content:"";display:table;}
+.cf{zoom:1;}
+.clear,.cf:after{clear:both;}
+.noshow{display:none;}
+.fl{float:left;}
+.fr{float:right;}
+.mt5{margin-top:5px;}
+.mt10 {margin-top: 10px;}
+.ml10{margin-left:10px;}
+.fs12{font-size:12px;}
