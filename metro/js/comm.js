@@ -51,8 +51,8 @@ $(document).ready(function() {
 	$('.fix').css('height',$cheight);
 	//scrollto
 	jQuery.scrollto = function(scrolldom,scrolltime) {
-		
-		$(scrolldom).click( function(){ 
+
+		$(scrolldom).click( function(){
 			var scrolltodom = $(this).attr("date-scroll");
 			$(this).addClass("thisscroll").siblings().removeClass("thisscroll");
 			$('html,body').animate({
@@ -63,10 +63,10 @@ $(document).ready(function() {
         	}
 			);
 			return false;
-		}); 
-		
+		});
+
 	};
-  
+
     $.scrollto(".share a",600);
     $.scrollto(".scroll_top",600);
     $.scrollto("#metro-resume",1600);
@@ -127,15 +127,23 @@ $(document).ready(function() {
 	$cwidth = $(window).width();
 	$aniwidth = -($cwidth + 17);
 	$("#metro-pic").click(function() {
-		$("#section1").animate({left: $aniwidth}, 500);
+		$("#section1").animate({
+			left: $aniwidth
+		}, 500);
 		//$("body").css('overflow', 'hidden');
-		$(".page-right").css('display', 'block').animate({left: '280px'}, 500).css('position', 'fixed');
+		$(".page-right").css('display', 'block').animate({
+			left: '280px'
+		}, 500).css('position', 'fixed');
 		kkk();
 	});
 	$(".close-page-right").click(function() {
-		$("#section1").animate({left: "0px"}, 500)
+		$("#section1").animate({
+			left: "0px"
+		}, 500)
 		//$("body").css('overflow', 'auto');
-		$(".page-right").css('display', 'none').animate({left: '2048px'}, 500);
+		$(".page-right").css('display', 'none').animate({
+			left: '2048px'
+		}, 500);
 	});
 
 	$(".pic-con li").bind('click', function() {
@@ -160,17 +168,35 @@ $(document).ready(function() {
 	}
 	/*video*/
 	$("#metro-video").on('click', function(event) {
-		$(this).animate({"top": "-158px","opacity": "0"}, 500);
-		$("#example_video_1").animate({"top": "-158px","opacity": "1"}, 500);
+		$(this).animate({
+			"top": "-158px",
+			"opacity": "0"
+		}, 500);
+		$("#example_video_1").animate({
+			"top": "-158px",
+			"opacity": "1"
+		}, 500);
 	});
 	/*设置*/
 	$("#setting-show").bind("click", function() {
 		$(this).addClass("imgs").removeAttr('id');
-		$(".page_left").css({display: "block",'background-color': 'rgb(33,145,246)'}).animate({left: '0px','opacity': '1'}, "slow");
+		$(".page_left").css({
+			display: "block",
+			'background-color': 'rgb(33,145,246)'
+		}).animate({
+			left: '0px',
+			'opacity': '1'
+		}, "slow");
 
 	});
 	$(".close-page-left").click(function() {
-		$(".page_left").css({display: "block",background: "rgb(33,145,246)"}).animate({	left: '-240px','opacity': '0'}, "slow");
+		$(".page_left").css({
+			display: "block",
+			background: "rgb(33,145,246)"
+		}).animate({
+			left: '-240px',
+			'opacity': '0'
+		}, "slow");
 	});
 	/*lower right corner open*/
 	$(".open-o").on('click', function() {
@@ -207,20 +233,30 @@ $(document).ready(function() {
 	});
 
 	function width0() {
-		$(".work-cons").find('.kind-hidden').css({'width': '0','margin': '0'});
+		$(".work-cons").find('.kind-hidden').css({
+			'width': '0',
+			'margin': '0'
+		});
 	}
 	$cwidth = $(window).width();
 	$aniwidth = -($cwidth + 17);
-	$(".open-url").on('click',function() {
-		$("#work").animate({left: $aniwidth}, 500);
+	$(".open-url").on('click', function() {
+		$("#work").animate({
+			left: $aniwidth
+		}, 500);
 		//$("body").css('overflow', 'hidden');
-		$("#work-open").css('display','block').animate({left: '0px'}, 500).css('position', 'fixed');
+		$("#work-open").css('display', 'block').animate({
+			left: '0px'
+		}, 500).css('position', 'fixed');
 		var openmode = $(this).attr('data-mode');
 		var openurl = $(this).attr('data-url');
 		if (openmode == "iframe") {
 			$("#work-frame").empty();
 			$('#work-frame').append("<iframe id='work-iframe' src='' frameborder='0' style='width:100%;height:100%;'></iframe>");
-			$("#work-iframe").attr({'src': openurl,'onLoad': "iFrameHeight()"});
+			$("#work-iframe").attr({
+				'src': openurl,
+				'onLoad': "iFrameHeight()"
+			});
 			$("#work-frame").css('overflow', 'hidden');
 		} else if (openmode == "ajax") {
 			$.ajax({
@@ -237,9 +273,13 @@ $(document).ready(function() {
 		//$("#work-frame").load(openurl);
 	});
 	$(".close-work-open").click(function() {
-		$("#work").animate({left: "0px"}, 500)
+		$("#work").animate({
+			left: "0px"
+		}, 500)
 		//$("body").css('overflow', 'auto');
-		$("#work-open").css('display', 'none').animate({left: '2048px'}, 500);
+		$("#work-open").css('display', 'none').animate({
+			left: '2048px'
+		}, 500);
 	});
 });
 
@@ -250,6 +290,7 @@ function played() {
 }
 //数字变幻
 var i = 0;
+
 function nums() {
 	var num = 350;
 	if (i <= num) {
